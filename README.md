@@ -2,34 +2,18 @@
 
 Lightweight Task/Project Management API (.NET 8, EF Core, SQL Server, Swagger).
 
-## Prerequisites
-
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- SQL Server (e.g. **XIT037\\MSSQLSERVER2022**) — used in Development; see Section 2.
-
----
-
-## Run and test
-
-```bash
-dotnet restore
-dotnet build
-dotnet run
-```
-
-Open **http://localhost:5000/swagger** (or the URL shown in the console) to explore and test the API.
 
 ---
 
 ## Section 2: Models + DbContext + Database
 
-- **Database name:** `Ruchi_TaskWorkflowDb` (prefix `Ruchi_` as requested).
-- **Connection:** Configured in `appsettings.Development.json` for Development (Server: `XIT037\MSSQLSERVER2022`, login: `test.practical`). See `docs/SECTION_2_SETUP.md` for details.
+- **Database name:** `Ruchi_TaskWorkflowDb`.
+- **Connection:** Configured in `appsettings.Development.json` for Development. See `docs/SECTION_2_SETUP.md` for details.
 
 ### Create the database
 
 **Option A — SQL script (easiest):**  
-1. Open **SSMS**, connect to **XIT037\MSSQLSERVER2022** as **test.practical**.  
+1. Open **SSMS**.  
 2. Open **scripts/CreateDatabase_Ruchi_TaskWorkflowDb.sql** and run it (F5).  
 3. Refresh Databases; **Ruchi_TaskWorkflowDb** should appear with **Projects** and **TaskItems**.
 
